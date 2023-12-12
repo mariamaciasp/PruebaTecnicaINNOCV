@@ -1,0 +1,56 @@
+Ejercicio técnico para QA Auto API:
+
+
+Caso de prueba 1: 
+Crea el usuario 1047 maricarmen_perez con el resto de datos con variables dinámicas (pre-request script). 
+
+Pre-request Script: 
+const variable = Math.floor((Math.random() * 100) + 1);
+pm.environment.set("firstName", "firstName" + variable);
+pm.environment.set("lastName", "lastName" + variable);
+pm.environment.set("email", "email" + variable);
+pm.environment.set("password", "password" + variable);
+pm.environment.set("phone", "phone" + variable);
+
+{
+  "id": 1047,
+  "username": "maricarmen_perez",
+  "firstName": "Mari Carmen",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "phone": "",
+  "userStatus": 0
+}
+
+
+
+Caso de prueba 2: 
+Consulta el usuario creado a través de variable global.
+
+GET -> /user/maricarmen_perez
+
+
+
+Caso de prueba 3: 
+Guarda ejemplos de todas las posibles respuestas de pet/findbystatus.
+
+
+
+Caso de prueba 4: 
+Actualiza el usuario 1047 con la contraseña 654321 y el teléfono 600000000.
+
+PUT -> /user/maricarmen_perez
+
+{
+  "password": "654321",
+  "phone": "600000000"
+}
+
+
+
+Caso de prueba 5: 
+Incluye en el GET de usuario, los tests que consideres necesarios.
+
+
+

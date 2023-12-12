@@ -1,0 +1,13 @@
+
+  Escenario: INNOCV acceso pantalla Contacto
+    Dado El navegador abierto en la dirección de INNOCV "https://www.innocv.com"
+    Cuando Se hace clic sobre el botón "Permitir todas las cookies"
+    Entonces Se deja de visualizar la sección de cookies
+    Cuando Se hace clic sobre el enlace "Contacto"
+    Entonces La url actual es "https://www.innocv.com/contacto"
+    Y Se accede a la pantalla de "¡HABLEMOS!"
+    Y Se visualiza el teléfono
+    Y Se visualiza el correo electrónico
+    Y Se muestra el apartado "¿Dónde estamos?"
+
+   
